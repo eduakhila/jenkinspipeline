@@ -1,0 +1,20 @@
+pipeline {
+agent any
+stages {
+stage("Cleaning stage") { 
+steps {
+bat "stage clean"
+}
+}
+stage("Testing stage") {
+steps {
+bat "stage test"
+}
+}
+stage("Packaging stage") {
+steps {
+bat "stage package"
+}
+}
+}
+}
